@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #fff3b0 0%, #e09f3e 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+    backdrop-filter: saturate(140%) blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 28px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #111827, #540b0e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.converter-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.converter.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 12px;
+}
+
+input, select {
+    padding: 14px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    color: #111827;
+}
+
+input:focus, select:focus {
+    border-color: #540b0e;
+    box-shadow: 0 0 0 3px #fa9898;
+}
+
+input {
+    flex: 1.5; 
+    min-width: 0; 
+}
+
+/* The select-with-flag container should take the wider width */
+.select-with-flag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 2; /* increase countries area width */
+}
+
+/* Select fills remaining space within its container */
+select {
+    flex: 1;
+    background-color: white;
+    cursor: pointer;
+    min-width: 180px;
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #6b7280 50%),
+                      linear-gradient(135deg, #6b7280 50%, transparent 50%),
+                      linear-gradient(to right, #e5e7eb, #e5e7eb);
+    background-position: calc(100% - 22px) calc(1em + 2px), calc(100% - 16px) calc(1em + 2px), calc(100% - 44px) 50%;
+    background-size: 6px 6px, 6px 6px, 1px 60%;
+    background-repeat: no-repeat;
+}
+
+/* Select with flag container */
+.select-with-flag img {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* Read-only result styling */
+#result[readonly] {
+    background: #f9fafb;
+    color: #111827;
+}
+
+.swap-btn {
+    display: flex;
+    justify-content: center;
+}
+
+#swap {
+    background: #9e2a2b;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 2px 6px #fa9898;
+}
+
+#swap:hover {
+    background: #540b0e;
+    transform: rotate(180deg);
+}
+
+#swap:active {
+    transform: scale(0.96) rotate(180deg);
+}
+
+#convert-btn {
+    background: #9e2a2b;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.05s ease;
+    margin-top: 10px;
+    box-shadow: 0 10px 16px #fa9898;
+}
+
+#convert-btn:hover {
+    background: #540b0e;
+}
+
+#convert-btn:active {
+    transform: translateY(1px);
+}
+
+#rate-info {
+    text-align: center;
+    color: #4b5563;
+    font-size: 15px;
+    min-height: 20px;
+    margin-top: 10px;
+}
+
+.error {
+    color: #991b1b;
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+    padding: 10px 12px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    min-height: 20px;
+    display: none; /* hidden by default; shown only when there is an error */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 22px;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    input, select {
+        width: 100%;
+    }
+}
