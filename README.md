@@ -58,11 +58,11 @@ Open index.html in your browser.
 (No backend needed for basic usage)
 
 3. Secure API Key with Netlify (Recommended)
-   - Add your API key in Netlify environment variables (EXCHANGE_API_KEY).
+- Add your API key in Netlify environment variables (EXCHANGE_API_KEY).
 
-   - Use the provided Netlify function (exchange-rate.js) to fetch rates securely.
+- Use the provided Netlify function (exchange-rate.js) to fetch rates securely.
 
-   - Update script.js to call:
+- Update script.js to call:
 
-      ```bash
-         const API_URL = '/.netlify/functions/exchange-rate?base=';
+    ```bash
+     const API_URL = '/.netlify/functions/exchange-rate?base=';
