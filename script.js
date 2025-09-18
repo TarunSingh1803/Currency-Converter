@@ -39,8 +39,7 @@ function populateCurrencyDropdowns() {
 }
 
 // API Configuration
-const API_KEY = '59b8b37fc326e0c5ee0a6a60';
-const API_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/`;
+const API_URL = '/.netlify/functions/exchange-rate?base=';
 
 // Exchange rate data
 let exchangeRates = {};
