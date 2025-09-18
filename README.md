@@ -13,13 +13,21 @@ The app also displays country flags for selected currencies and provides up-to-d
 ## 📂 Project Structure
 Currency-Converter/
 ├── index.html # Main UI
+
 ├── script.js # App logic (conversion, API calls, flags)
+
 ├── styles.css # Styling & responsive design
+
 ├── codes.js # Currency codes + names
 ├── currencyToCountry.js # Currency → Country mapping for flags
+
+
 └── netlify/
+
 └── functions/
+
 └── exchange-rate.js # Serverless function (hides API key)
+
 ---
 
 ## ✨ Features
@@ -51,7 +59,10 @@ Open index.html in your browser.
 
 3. Secure API Key with Netlify (Recommended)
 -Add your API key in Netlify environment variables (EXCHANGE_API_KEY).
+
 -Use the provided Netlify function (exchange-rate.js) to fetch rates securely.
+
 -Update script.js to call:
-```bash
-const API_URL = '/.netlify/functions/exchange-rate?base=';
+
+   ```bash
+   const API_URL = '/.netlify/functions/exchange-rate?base=';
