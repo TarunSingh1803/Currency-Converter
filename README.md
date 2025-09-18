@@ -34,4 +34,4 @@ The app also displays country flags for selected currencies and provides up-to-d
 ## ⚡ How to Run Locally
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/currency-converter.git
+   git clone https://github.com/TarunSingh1803/currency-converter.git
